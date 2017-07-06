@@ -1,0 +1,15 @@
+{
+  "name": "playgrond",
+  "version": "1.0.0",
+  "description": "cassie's react playground",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "cassie",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.0.0"
+  }
+}
