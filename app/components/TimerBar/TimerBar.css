@@ -1,16 +1,36 @@
-.square{
+.timer{
     width: 100px;
     height: 100px;
-    border: 50px solid blanchedalmond;
     border-radius: 50%;
-    animation-name: spin;
+    position: relative;
+    left: 100px;
+    top:100px;
+}
+.timer :first-child{
+    /*transform: rotate(45deg);*/
+    float: left;
+    height: 100%;
+    width: 100%;
+    animation-name: spin1;
     animation-duration: 4s;
     animation-iteration-count: infinite;
+}
+.timer :first-child span{
+    /*transform: rotate(225deg);*/
+    border-radius: 50%;
+    border: 50px solid rgba(0, 255, 255, .4);
+    transform-origin: right top;
     border-bottom-color: transparent;
     border-left-color: transparent;
-    transform: rotate(225deg);
+    width: 0;
+    height:0;
+    display: block;
 }
-@keyframes spin {
+.timer :last-child{
+    float: left;
+    animation-name: spin2;
+}
+@keyframes spin1 {
     0%{
         transform: rotate(225deg);
     }
@@ -21,3 +41,14 @@
         transform: rotate(405deg);
     }
 }
+/*@keyframes spin2 {*/
+    /*0%{*/
+        /*transform: rotate(0deg);*/
+    /*}*/
+    /*50%{*/
+        /*transform: rotate(0deg);*/
+    /*}*/
+    /*100%{*/
+        /*transform: rotate(225deg);*/
+    /*}*/
+/*}*/

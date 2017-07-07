@@ -49,7 +49,10 @@ class TimerBar extends Component{
                     <h2>Timer</h2>
                     <p>{timeParts}</p>
                 </div>
-                <div className={styles.square}></div>
+                <div className={styles.timer}>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                </div>
             </div>
         );
     }
