@@ -1,54 +1,138 @@
-.timer{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+.container{
     position: relative;
-    left: 100px;
-    top:100px;
+    left: 400px;
+    top: 100px;
+
 }
-.timer :first-child{
-    /*transform: rotate(45deg);*/
-    float: left;
-    height: 100%;
-    width: 100%;
-    animation-name: spin1;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+.timer{
+    top:0;
+    left:0;
+    margin-left:200px;
+    position:absolute;
+    width:200px;
+    height:400px;
+    overflow:hidden;
+    border-radius:0 200px 200px 0;
 }
-.timer :first-child span{
-    /*transform: rotate(225deg);*/
-    border-radius: 50%;
-    border: 50px solid rgba(0, 255, 255, .4);
-    transform-origin: right top;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    width: 0;
-    height:0;
-    display: block;
+.timer.hours{
+    animation: a 3600s infinite linear;
 }
-.timer :last-child{
-    float: left;
-    animation-name: spin2;
+.timer.minutes{
+    animation: a 60s infinite linear;
 }
-@keyframes spin1 {
+.timer.seconds{
+    /*opacity: 0.2;*/
+    animation: a 1s infinite linear;
+}
+.timer.seconds:before, .timer.seconds:after{
+    content:"";
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    width: 160px;
+    height: 320px;
+    background: #FCA7A7;
+    border-radius: 0 160px 160px 0;
+}
+.timer.seconds:before{
+    transform-origin: 0 160px;
+    animation: a1 1s infinite linear;
+}
+
+.timer.seconds:after{
+    transform-origin: 160px 160px;
+    animation: a2 1s infinite linear;
+}
+.timer.minutes:before, .timer.minutes:after{
+    content:"";
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 180px;
+    height: 360px;
+    background: #FC624D;
+    border-radius: 0 180px 180px 0;
+}
+.timer.minutes:before{
+    transform-origin: 0 180px;
+    animation: a1 60s infinite linear;
+}
+
+.timer.minutes:after{
+    transform-origin: 180px 180px;
+    animation: a2 60s infinite linear;
+}
+
+.timer.hours:before, .timer.hours:after{
+    content:"";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 400px;
+    background: #18587A;
+    border-radius: 0 200px 200px 0;
+}
+.timer.hours:before{
+    transform-origin: 0 200px;
+    animation: a1 3600s infinite linear;
+}
+
+.timer.hours:after{
+    transform-origin: 200px 200px;
+    animation: a2 3600s infinite linear;
+}
+.face{
+    top:50px;
+    left:50px;
+    position:absolute;
+    width:300px;
+    height:300px;
+    background: #fff;
+    border-radius:150px;
+    text-align: center;
+    align-content: center;
+}
+
+@-webkit-keyframes a{
     0%{
-        transform: rotate(225deg);
+        width: 200px;
+        margin-left:200px;
+    }
+    49.99%{
+        width: 200px;
+        margin-left:200px;
     }
     50%{
-        transform: rotate(225deg);
+        width: 400px;
+        margin-left:0;
+        border-radius: 0;
     }
     100%{
-        transform: rotate(405deg);
+        width: 400px;
+        margin-left:0;
+        border-radius: 0;
     }
 }
-/*@keyframes spin2 {*/
-    /*0%{*/
-        /*transform: rotate(0deg);*/
-    /*}*/
-    /*50%{*/
-        /*transform: rotate(0deg);*/
-    /*}*/
-    /*100%{*/
-        /*transform: rotate(225deg);*/
-    /*}*/
-/*}*/
+@-webkit-keyframes a1{
+    0%{
+        transform: rotate(-180deg)
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+@-webkit-keyframes a2{
+    0%{
+        opacity: 0;
+    }
+    49.99%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}

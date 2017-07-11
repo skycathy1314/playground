@@ -44,14 +44,13 @@ class TimerBar extends Component{
         let {timeParts} = this.state;
 
         return (
-            <div>
-                <div className="face">
+            <div className={styles.container}>
+                <div className={styles.timer+ " " +styles.hours}></div>
+                <div className={styles.timer+ " " +styles.minutes}></div>
+                <div className={styles.timer+ " " +styles.seconds}></div>
+                <div className={styles.face}>
                     <h2>Timer</h2>
                     <p>{timeParts}</p>
-                </div>
-                <div className={styles.timer}>
-                    <div><span></span></div>
-                    <div><span></span></div>
                 </div>
             </div>
         );
