@@ -1,0 +1,52 @@
+.father{
+    width:100%;
+}
+.container{
+    transform-style: preserve-3d;
+    width:100px;
+    margin: 200px auto;
+    /*-webkit-transform: rotateX(-33.5deg) rotateY(45deg);*/
+    /*transform: rotateX(-33.5deg) rotateY(45deg);*/
+    animation: a1 10s infinite linear;
+
+}
+.container div{
+    background: burlywood;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    opacity: 0.8;
+}
+.container :nth-child(1){
+    transform: translate3d(0px, 0px, -50px);
+}
+.container :nth-child(2){
+    background: bisque;
+    transform: rotateY(90deg) translate3d(0px, 0px, -50px);
+}
+.container :nth-child(3){
+    background: antiquewhite;
+    transform: rotateX(90deg) translate3d(0px, 0px, 50px);
+}
+.container :nth-child(4){
+    background: blanchedalmond;
+    transform: rotateY(-90deg) translate3d(0px, 0px, 50px);
+}
+.container :nth-child(5){
+    transform: rotateX(90deg) translate3d(0px, 0px, -50px);
+}
+.container :nth-child(6){
+    transform: translate3d(0px, 0px, 50px);
+}
+
+@-webkit-keyframes a1 {
+    0%{
+        transform: rotateX(-33.5deg) rotateY(0deg);
+    }
+    50%{
+        transform: rotateX(-33.5deg) rotateY(180deg);
+    }
+    100%{
+        transform: rotateX(-33.5deg) rotateY(360deg);
+    }
+}

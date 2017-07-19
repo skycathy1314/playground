@@ -43,6 +43,7 @@ class TimerBar extends Component{
   render(){
     let { timeParts } = this.state;
 
+
     return (
       <div className={styles.container}>
         <div className={`${styles.timer} ${styles.hours}`}></div>
