@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Home from './components/Home/Home';
 import TimerBar from './components/TimerBar/TimerBar';
 import CuteCube from './components/CuteCube/CuteCube';
+import Begin from './components/D3/Begin/Begin';
 
 
 ReactDOM.render(
@@ -21,6 +22,7 @@ ReactDOM.render(
       <Route exact path="/" component={() => { return <Home /> }} />
       <Route path="/timerBar" component={() => { return <TimerBar /> }} />
       <Route path="/cuteCube" component={() => { return <CuteCube /> }} />
+      <Route path="/d3/begin" component={() => { return <Begin /> }} />
     </div>
   </Router>
 , document.getElementById('root'));

@@ -94,7 +94,7 @@
     // 禁止在全局范围内使用 var 和命名的 function 声明
     "no-implicit-globals": 2,
     // 禁止使用多个空格
-    "no-multi-spaces": 2,
+    "no-multi-spaces": 4,
     // 禁止在非赋值或条件语句中使用 new 操作符
     "no-new": 2,
     // 禁止对 Function 对象使用 new 操作符
