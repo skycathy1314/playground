@@ -22,7 +22,7 @@ ReactDOM.render(
       <Route exact path="/" component={() => { return <Home /> }} />
       <Route path="/timerBar" component={() => { return <TimerBar /> }} />
       <Route path="/cuteCube" component={() => { return <CuteCube /> }} />
-      <Route path="/d3/begin" component={() => { return <Begin /> }} />
+      <Route path="/begin" component={() => { return <Begin /> }} />
     </div>
   </Router>
 , document.getElementById('root'));
